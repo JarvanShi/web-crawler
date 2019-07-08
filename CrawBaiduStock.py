@@ -59,7 +59,7 @@ def getStockInfo(stock_info_uri, stock_list, fpath):
             print('\r当前进度: {:.2f}%'.format(count*100/len(stock_list)), end='')
             continue
 
-def main():
+if __name__ == "__main__":
     stock_list_uri ='http://quote.eastmoney.com/stocklist.html'
     stock_info_uri ='https://gupiao.baidu.com/stock/'
     stock_list_fpath ='E:/stockList.txt'
@@ -67,5 +67,3 @@ def main():
     lst = []
     getStockList(stock_list_uri, lst, stock_list_fpath)
     getStockInfo(stock_info_uri, lst, stock_info_fpath)
-
-main()
